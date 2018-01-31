@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Middle Market Alliance</title>
+  <meta name="description" content="Middle Alliance Crypto Landing Page">
+  <meta name="author" content="Andrew Nguyen/Vijay Vishwakarma">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog({
+      width:600,
+      height:350,
+      autoOpen: false,
+      show: {
+        effect: "clip",
+        duration: 1000
+      },
+      hide: {
+        effect: "clip",
+        duration: 1000
+      }
+    });
+
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  function myFunction() {
+    //e.preventDefault();
+
+    var add1, add2;
+
+    add1 = document.getElementById("wallet").value;
+    add2 = document.getElementById("key").value;
+    var letters = /^[0-9a-zA-Z]+/;  
+    if( /[^a-zA-Z0-9]/.test( add1 ) ) {
+       alert('Wallet Address is not alphanumeric');
+    }
+    if( /[^a-zA-Z0-9]/.test( add2 ) ) {
+       alert('Private Key is not alphanumeric');
+    }
+    if(add1=="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2" && add2=="E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262"){
+      window.open('home.html',"_self");
+    }
+    else{
+      alert("Wrong Wallet Address or Private Key")
+    }
+    return false;
+}
+  </script>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="dialog" class="popup">
+      <form class="form-style-4" action="" method="post" >
+        <label for="field1">
+        <span>Wallet Address</span><input type="text" name="field1" id="wallet" value="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2" required="true" />
+        </label>
+        <label for="field2">
+        <span>Private Key</span><input type="text" name="field2" id="key" value="E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262" required="true" />
+        </label>
+        <label>
+        <span>&nbsp;</span><input type="submit" value="Submit" onclick=" return myFunction()"/>
+        </label>
+      </form>
+</div>
+
+
+<div id="index">
+  <div id="wrapper">
+  <a><div id="opener" class="title">
+    <center><h1><span id="title_content">$</span></h1></center>
+  </div></a>
+  <a href="https://www.midmarketalliance.org/"><div id="up_left">
+    <center><h1 class="subtitles" style="letter-spacing:1.2vw;">ABOUT</h1></center>
+  </div></a>
+  <a href="#"><div id="up_right">
+    <center><h1 class="subtitles">INNOVATE</h1></center>
+  </div></a>
+  <a href="#"><div id="low_left">
+    <center><h1 class="subtitles">EXPLORER</h1></center>
+  </div></a>
+  <a href="https://www.midmarketalliance.org/user/register"><div id="low_right">
+    <center><h1 class="subtitles">ALLIANCE</h1></center>
+  </div></a>
+  </div>
+</div>
+</body>
+</html>
