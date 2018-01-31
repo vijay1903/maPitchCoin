@@ -1,0 +1,260 @@
+body{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+#index{
+  height: 100%;
+  margin: 0;
+  background-image:url("../images/middle_mar.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#wrapper{
+  height: 100%;
+  width:70%;
+  height: inherit;
+  margin: 0 auto;
+  position: relative;
+ }
+.title{
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color:red;
+  background-position: center;
+  background-size: 100% 100%;
+  margin: 0;
+  width: 5vw;
+  height: 10vh;
+  position: absolute;
+    top: 44.25vh;
+    left: 0;
+    right: -.20vh;
+    margin: 0 auto;
+  animation:spin 2s linear infinite alternate;
+}
+@keyframes spin {
+  0% { transform: rotateY(0deg);color:red; }
+  100% { transform: rotateY(360deg);color:lightgreen; }
+}
+#title_content{
+  position: absolute;
+    top: 3vh;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin: 0 auto;
+    }
+.title:hover #title_content{
+  display: none;
+}
+.title:hover:before{
+  font-size: 1.5vw;
+  font-weight: 800;
+  font-family: Palatino;
+  width: 50vw;
+  position: absolute;
+    top: 4.3vh;
+    margin: 0 auto;
+    margin-left:.45vw;
+  content:"Login";
+}
+.popup{
+  position: relative;
+  left:2vw;
+  top:2vw;
+}
+/**********
+Form Style
+**********/
+.form-style-4{
+    width: 450px;
+    font-size: 16px;
+    background: #353536;
+    padding: 30px 30px 15px 30px;
+    border: 5px solid white;
+}
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+.form-style-4 label
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+
+}
+.form-style-4 label {
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-4 label > span{
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=email]
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #88ED9B;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+}
+.form-style-4 textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #353536;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style-4 textarea:focus,
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus
+{
+    border-bottom: 1px dashed #88ED9B;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+    background: white;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #88ED9B;
+}
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+background: black;
+}
+/*************
+End Form Style
+*************/
+#up_left{
+  background-image: url("../images/middle_mark-crop.png");
+  border-bottom-right-radius:60px;
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 10.9vh;
+  left: -7.7vw;
+  opacity:0.5;
+}
+#up_left:hover{
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 10.9vh;
+  left: -7.7vw;
+  opacity:1;
+  box-shadow: -7px -7px 5px grey;
+  transition:0.5s;
+}
+#up_right{
+  background-image: url("../images/middle_mark-crop2.png");
+  border-bottom-left-radius:60px;
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 10.9vh;
+  left: 35.5vw;
+  opacity:0.5;
+}
+#up_right:hover{
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 10.9vh;
+  left: 35.5vw;
+  opacity:1.0;
+  box-shadow: 7px -7px 5px grey;
+  transition:0.5s;
+}
+
+#low_left{
+  background-image: url("../images/middle_mark-crop4.png");
+  border-top-right-radius:60px;
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 51vh;
+  left: -7.7vw;
+  opacity:0.5;
+}
+#low_left:hover{
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 51vh;
+  left: -7.7vw;
+  opacity:1.0;
+  box-shadow: -7px 7px 5px grey;
+  transition:0.5s;
+}
+#low_right{
+  background-image: url("../images/middle_mark-crop3.png");
+  border-top-left-radius:60px;
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 51vh;
+  left: 35.5vw;
+  opacity:0.5;
+}
+#low_right:hover{
+  width: 42.3vw;
+  height: 38vh;
+  position: absolute;
+  top: 51vh;
+  left: 35.5vw;
+  opacity:1.0;
+  box-shadow: 7px 7px 5px grey;
+  transition:0.5s;
+}
+.subtitles{
+  color:lightgreen;
+  font-size:7vw;
+  position: absolute;
+  top: 6vh;
+  left: 0;
+  right: 0;
+  font-family: Palatino;
+}
+#res_wrapper{
+  height: 100%;
+  width: 100%;
+  background-image:url("../images/frame.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+#results{
+  color:green;
+  width: 70vw;
+  height: 70vh;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right:0;
+  margin: 0 auto;
+}
+#res_title{
+  font-size: 300%;
+}
+.res_font{
+  font-family:Palatino;
+  font-size: 2.2vh;
+}
